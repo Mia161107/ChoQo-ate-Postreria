@@ -1,0 +1,268 @@
+/* ======================== */
+/* Estilos Generales y Tipografía */
+/* ======================== */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #444;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    color: #880e4f; /* Rosa oscuro */
+}
+
+/* ======================== */
+/* Encabezado y Navegación */
+/* ======================== */
+.main-header {
+    background-color: #f8bbd0; /* Rosa pastel */
+    color: #fff;
+    padding: 0.000000000001rem 0.0001rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.logo-link {
+    display: inline-block;
+}
+
+.logo-image {
+    height: 175px; 
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem; /* Fuente más pequeña para compactar la barra */
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #d81b60; /* Rosa brillante */
+}
+
+/* ======================== */
+/* Secciones de la Página */
+/* ======================== */
+main {
+    margin-top: 175px; /* Espacio para que el header fijo no cubra el contenido */
+}
+
+.hero-section {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #ffebee; /* Rosa muy claro */
+}
+
+.search-section {
+    text-align: center;
+    padding: 2rem 3rem;
+    background-color: #fce4ec; /* Rosa aún más claro */
+}
+
+#searchInput {
+    padding: 0.8rem 1rem;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #f8bbd0;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #d81b60; /* Rosa brillante al enfocar */
+}
+
+.products-section {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #d81b60;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background-color: #fcf5f5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.product-info {
+    padding: 1rem;
+}
+
+.product-info h3 {
+    margin: 0 0 0.5rem;
+}
+
+.product-info p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+}
+
+/* ======================== */
+/* Pie de Página */
+/* ======================== */
+.main-footer {
+    background-color: #fab3cd;
+    color: #ffe3e3;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+}
+
+.main-footer p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+/* ======================== */
+/* Estilos del Modal */
+/* ======================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease-in-out;
+}
+
+.modal-overlay.active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-container {
+    background-color: #fff8f8; /* Rosa muy claro */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: scale(0.9);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-overlay.active .modal-container {
+    transform: scale(1);
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #880e4f;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    color: #c2185b;
+}
+
+.modal-content {
+    text-align: center;
+}
+
+.modal-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para el carrusel de imágenes */
+.modal-carousel-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.modal-main-image {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev-btn, .next-btn {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    color: #d81b60;
+}
+
+.modal-description {
+    font-style: italic;
+    color: #6

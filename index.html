@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choqoñate Postrería</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <a href="#" class="logo-link">
+            <img src="logo.png.png" alt="Logo de Choqoñate Postrería" class="logo-image">
+        </a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#buscar">Buscar</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <h2>El arte de la repostería con un toque de color</h2>
+            <p>Descubre nuestros postres hechos con pasión y los mejores ingredientes, inspirados en tonos pasteles.</p>
+        </section>
+
+        <section id="buscar" class="search-section">
+            <input type="text" id="searchInput" placeholder="Buscar postres...">
+        </section>
+        
+        <section id="productos" class="products-section">
+            <h2>Nuestros Postres</h2>
+            <div id="product-grid" class="product-grid">
+                </div>
+        </section>
+        
+        <section id="servicios" class="products-section">
+            <h2>Nuestros Servicios</h2>
+            <div id="services-grid" class="product-grid">
+                </div>
+        </section>
+    </main>
+
+    <footer id="contacto" class="main-footer">
+        <p>&copy; 2025 Choqoñate Postrería. Todos los derechos reservados.</p>
+        <p>Redes Sociales: ChoQoñate Postres | Tel: +52 866 174 62 64</p>
+    </footer>
+
+    <div id="product-modal" class="modal-overlay">
+        <div class="modal-container">
+            <button class="modal-close-btn">&times;</button>
+            <div id="modal-content" class="modal-content">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
